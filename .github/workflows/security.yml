@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - dev
+      - feature/coverage
 
   pull_request:
     branches:

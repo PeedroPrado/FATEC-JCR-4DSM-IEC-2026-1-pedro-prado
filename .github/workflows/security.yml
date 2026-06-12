@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - dev
+      - feature/coverage
 
   pull_request:
     branches:
@@ -25,7 +26,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        - run: npm install --legacy-peer-deps
+        run: npm install --legacy-peer-deps
 
       - name: Security Audit
         run: npm audit

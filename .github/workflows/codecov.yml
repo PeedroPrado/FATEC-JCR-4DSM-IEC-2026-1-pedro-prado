@@ -13,16 +13,21 @@ jobs:
         working-directory: Apresentacao-da-Disciplina/P2-Conteudos/Atividades/Atividade-08
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - run: npm install --legacy-peer-deps
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
 
-      - run: npm run test:coverage
+      - name: Generate Coverage
+        run: npm run test:coverage
 
-      - uses: codecov/codecov-action@v4
+      - name: Upload Coverage
+        uses: codecov/codecov-action@v4
         with:
           directory: Apresentacao-da-Disciplina/P2-Conteudos/Atividades/Atividade-08/coverage

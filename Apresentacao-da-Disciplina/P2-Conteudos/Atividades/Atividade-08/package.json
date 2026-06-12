@@ -1,19 +1,13 @@
 {
   "name": "atividade-08",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-  "test": "jest",
-  "test:coverage": "jest --coverage"
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.14",
-    "@types/node": "^25.9.3",
+    "@types/node": "^24.0.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.4.11",
     "typescript": "^5.8.3"

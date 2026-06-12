@@ -1,9 +1,8 @@
 name: Coverage Report
 
 on:
+  push:
   pull_request:
-    branches:
-      - main
 
 jobs:
   coverage:
@@ -14,12 +13,16 @@ jobs:
         working-directory: Apresentacao-da-Disciplina/P2-Conteudos/Atividades/Atividade-08
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - run: npm install
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
 
-      - run: npm run test:coverage
+      - name: Run Coverage
+        run: npm run test:coverage

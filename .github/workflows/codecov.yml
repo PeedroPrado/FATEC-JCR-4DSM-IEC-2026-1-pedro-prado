@@ -1,9 +1,8 @@
 name: Codecov Upload
 
 on:
+  push:
   pull_request:
-    branches:
-      - main
 
 jobs:
   upload:
@@ -20,7 +19,7 @@ jobs:
         with:
           node-version: 20
 
-      - run: npm install
+      - run: npm install --legacy-peer-depsrun: npm install
 
       - run: npm run test:coverage
 
